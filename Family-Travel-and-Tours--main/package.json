@@ -1,0 +1,27 @@
+{
+  "name": "family-travel-and-tours",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Family Travel and Tours - Victoria Falls, Zimbabwe",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "server": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "framer-motion": "^13.2.0",
+    "lenis": "^1.3.26",
+    "next": "^14.2.5",
+    "nodemailer": "^6.9.14",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "typescript": "^5.5.0"
+  }
+}
