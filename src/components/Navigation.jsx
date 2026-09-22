@@ -24,6 +24,21 @@ export default function Navigation() {
     };
   }, [menuOpen]);
 
+  // Close the menu when the route changes.
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [pathname]);
+
+  // Close the menu with the Escape key.
+  useEffect(() => {
+    if (!menuOpen) return;
+    const onKeyDown = (e) => {
+      if (e.key === "Escape") setMenuOpen(false);
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [menuOpen]);
+
   return (
     <>
       <div className={`navigationWrapper ${scrolled ? "scrolled" : ""}`}>
@@ -67,8 +82,11 @@ export default function Navigation() {
 
             <button
               className="nav-toggle"
+              type="button"
               onClick={() => setMenuOpen(true)}
               aria-label="Open menu"
+              aria-expanded={menuOpen}
+              aria-controls="mobile-menu"
             >
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
                 <path d="M3 6h18M3 12h18M3 18h18" />
@@ -78,9 +96,15 @@ export default function Navigation() {
         </div>
       </div>
 
-      <div className={`mobile-nav ${menuOpen ? "open" : ""}`}>
-        <button className="mobile-nav-close" onClick={() => setMenuOpen(false)} aria-label="Close menu">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+      <div className={`mobile-nav ${menuOpen ? "open" : ""}`} id="mobile-menu">
+        <button
+          type="button"
+          className="mobile-nav-close"
+          onClick={() => setMenuOpen(false)}
+          aria-label="Close menu"
+          aria-expanded={menuOpen}
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
             <path d="M18 6L6 18M6 6l12 12" />
           </svg>
         </button>

@@ -18,6 +18,17 @@ const EXPERIENCES = [
   { label: "Cultural Experiences", href: "/tours#cultural-experiences" },
 ];
 
+const CREDIT = {
+  company: "Click and Create (Pride Moyana)",
+  phoneDisplay: "+263 777 452 902",
+  whatsapp: "263777452902", // country code, no spaces or +
+  message: "Hello Pride Moyana / Click and Create, I saw your work on the Family Travel and Tours website and I'd like to discuss a project.",
+};
+
+const CREDIT_WA_LINK = `https://wa.me/${CREDIT.whatsapp}?text=${encodeURIComponent(
+  CREDIT.message
+)}`;
+
 export default function Footer() {
   return (
     <footer className="footer">
@@ -85,6 +96,18 @@ export default function Footer() {
           <Link href="/privacy-policy">Privacy</Link>
           <Link href="/terms-conditions">Terms</Link>
         </div>
+      </div>
+
+      <div className="footer-credit">
+        <span className="footer-credit-label">Website by</span>
+        <a href={CREDIT_WA_LINK} target="_blank" rel="noopener noreferrer">
+          {CREDIT.company}
+        </a>
+        <span className="footer-dot" />
+        <span className="footer-credit-label">Cell:</span>
+        <a href={CREDIT_WA_LINK} target="_blank" rel="noopener noreferrer">
+          {CREDIT.phoneDisplay}
+        </a>
       </div>
     </footer>
   );
