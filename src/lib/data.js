@@ -5,7 +5,10 @@ export const COMPANY = {
   city: "Victoria Falls, Zimbabwe",
   phones: ["+263 779 257 661", "+263 712 540 998", "+44 772 213 7884"],
   whatsapp: ["263779257661", "263712540998", "447722137884"],
-  email: "info@familytraveltours.com",
+  email: "info@familytravel-tours.com",
+  emailSubject: "Trip Enquiry - Family Travel and Tours",
+  emailBody:
+    "Hello Family Travel and Tours,\n\nI'd like to plan a trip. Please get in touch with me.",
   waMessage:
     "Hello Family Travel and Tours, I'd like to plan a trip!",
 };

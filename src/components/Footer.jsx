@@ -45,7 +45,13 @@ export default function Footer() {
               {COMPANY.phones[0]}
             </a>
             <span className="footer-dot" />
-            <a href="mailto:info@familytraveltours.com">info@familytraveltours.com</a>
+            <a
+              href={`https://mail.google.com/mail/?view=cm&to=${encodeURIComponent(COMPANY.email)}&su=${encodeURIComponent(COMPANY.emailSubject)}&body=${encodeURIComponent(COMPANY.emailBody)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {COMPANY.email}
+            </a>
           </div>
         </div>
 
