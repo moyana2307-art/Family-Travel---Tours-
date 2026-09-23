@@ -133,6 +133,16 @@ export const TOURS = [
     image: IMAGES.culture,
     tag: "Culture",
   },
+  {
+    slug: "airport-and-local-transfers",
+    name: "Airport & Local Transfers",
+    lead: "Safe, Comfortable Transport",
+    description:
+      "Start your trip the easy way with reliable airport pickups and local transfers. We provide safe, comfortable transport to and from Victoria Falls Airport, hotels, lodges, border crossings, and all your chosen experiences.",
+    perfectFor: "All travelers arriving in Victoria Falls.",
+    image: IMAGES.travel,
+    tag: "Transfers",
+  },
 ];
 
 export const DESTINATIONS = [

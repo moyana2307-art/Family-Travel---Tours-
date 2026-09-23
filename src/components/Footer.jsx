@@ -16,6 +16,7 @@ const EXPERIENCES = [
   { label: "Adventure", href: "/tours#zambezi-river-adventure" },
   { label: "Family Holidays", href: "/family-travel" },
   { label: "Cultural Experiences", href: "/tours#cultural-experiences" },
+  { label: "Transfers", href: "/tours#airport-and-local-transfers" },
 ];
 
 const CREDIT = {

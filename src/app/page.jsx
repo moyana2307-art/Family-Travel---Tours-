@@ -98,7 +98,7 @@ export default function HomePage() {
         <div className="marquee-track">
           {[...Array(2)].map((_, dup) => (
             <span key={dup}>
-              {["Safaris", "Victoria Falls", "Zambezi", "Family Holidays", "Adventure", "Wildlife", "Chobe", "Cultural Experiences"].map(
+              {["Safaris", "Victoria Falls", "Zambezi", "Family Holidays", "Adventure", "Wildlife", "Chobe", "Cultural Experiences", "Transfers"].map(
                 (w) => (
                   <span key={`${dup}-${w}`}>
                     {w} <span style={{ color: "var(--color-accent)" }}>&bull;</span>
