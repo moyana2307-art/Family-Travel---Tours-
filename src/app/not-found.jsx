@@ -2,6 +2,11 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Button from "@/components/Button";
 
+export const metadata = {
+  title: "Page Not Found",
+  robots: { index: false, follow: false },
+};
+
 export default function NotFound() {
   return (
     <>

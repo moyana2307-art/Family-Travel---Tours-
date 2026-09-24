@@ -3,12 +3,24 @@ import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 import Reveal from "@/components/Reveal";
 import { IMAGES, DESTINATIONS } from "@/lib/data";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Destinations",
+export const metadata = buildMetadata({
+  title: "Destinations | Victoria Falls, Zimbabwe & Southern Africa",
   description:
     "Discover incredible destinations across Zimbabwe and Southern Africa - Victoria Falls, Hwange National Park, Zambezi River, Chobe, Livingstone, and Matobo.",
-};
+  path: "/destinations",
+  imagePath: IMAGES.heroFalls,
+  keywords: [
+    "Victoria Falls",
+    "Hwange National Park",
+    "Chobe Botswana",
+    "Livingstone Zambia",
+    "Matobo",
+    "Zambezi River",
+    "Zimbabwe destinations",
+  ],
+});
 
 export default function DestinationsPage() {
   return (

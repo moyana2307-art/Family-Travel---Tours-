@@ -6,7 +6,7 @@ export default function CtaBanner({ image }) {
     <section className="cta-banner">
       <div className="cta-banner-inner">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="cta-banner-bg" src={image} alt="" />
+        <img className="cta-banner-bg" src={image} alt="" loading="lazy" />
         <div className="cta-banner-overlay" />
         <Reveal className="cta-banner-content">
           <h2>Your Next Adventure Is Waiting</h2>

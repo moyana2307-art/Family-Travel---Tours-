@@ -4,12 +4,21 @@ import PageHero from "@/components/PageHero";
 import EnquiryForm from "@/components/EnquiryForm";
 import Reveal from "@/components/Reveal";
 import { IMAGES, COMPANY } from "@/lib/data";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Contact & Book a Tour",
+export const metadata = buildMetadata({
+  title: "Contact & Book a Tour | Victoria Falls, Zimbabwe",
   description:
     "Start your journey with Family Travel and Tours. Have a question, need help planning your trip, or ready to start your adventure? Contact us in Victoria Falls, Zimbabwe.",
-};
+  path: "/contact",
+  imagePath: IMAGES.heroSafari,
+  keywords: [
+    "contact Family Travel and Tours",
+    "book Victoria Falls tour",
+    "Victoria Falls trip enquiry",
+    "Zimbabwe travel planning",
+  ],
+});
 
 const MapPinIcon = (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

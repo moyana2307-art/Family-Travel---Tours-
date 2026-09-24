@@ -5,17 +5,45 @@ import CtaBanner from "@/components/CtaBanner";
 import Button from "@/components/Button";
 import Reveal from "@/components/Reveal";
 import { IMAGES, TOURS } from "@/lib/data";
+import { buildMetadata } from "@/lib/seo";
+import JsonLd from "@/components/JsonLd";
 
-export const metadata = {
-  title: "Tours & Experiences",
+export const metadata = buildMetadata({
+  title: "Tours & Experiences | Victoria Falls Safaris & Activities",
   description:
-    "Discover unforgettable tours and experiences in Victoria Falls, Zimbabwe - from Victoria Falls experiences and Zambezi cruises to Hwange safaris and white water rafting.",
-};
+    "Discover unforgettable tours and experiences in Victoria Falls, Zimbabwe - from Victoria Falls experiences and Zambezi cruises to Hwange safaris, white water rafting and accommodation.",
+  path: "/tours",
+  imagePath: IMAGES.heroSafari,
+  keywords: [
+    "Victoria Falls tours",
+    "Zimbabwe safaris",
+    "Hwange safari",
+    "Zambezi sunset cruise",
+    "white water rafting",
+    "Chobe day trip",
+    "Victoria Falls activities",
+  ],
+});
 
 export default function ToursPage() {
   return (
     <>
       <Navigation />
+
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          name: "Family Travel and Tours - Tours and Experiences",
+          itemListElement: TOURS.map((tour, index) => ({
+            "@type": "ListItem",
+            position: index + 1,
+            name: tour.name,
+            description: tour.description,
+            url: `${process.env.NEXT_PUBLIC_SITE_URL || "https://www.familytravelstours.com"}/tours#${tour.slug}`,
+          })),
+        }}
+      />
 
       <PageHero
         title="Tours & Experiences"

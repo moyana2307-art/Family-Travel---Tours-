@@ -1,4 +1,4 @@
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.familytravelstours.com";
+import { SITE_URL } from "@/lib/seo";
 
 export default function sitemap() {
   const routes = [

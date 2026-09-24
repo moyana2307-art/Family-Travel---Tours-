@@ -5,12 +5,21 @@ import CtaBanner from "@/components/CtaBanner";
 import Button from "@/components/Button";
 import Reveal from "@/components/Reveal";
 import { IMAGES } from "@/lib/data";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "About Us",
+export const metadata = buildMetadata({
+  title: "About Us | Victoria Falls Tour Company",
   description:
     "Family Travel and Tours is a Victoria Falls-based travel company committed to connecting people with unforgettable destinations and experiences across Zimbabwe and Southern Africa.",
-};
+  path: "/about",
+  imagePath: IMAGES.heroFalls,
+  keywords: [
+    "Victoria Falls travel company",
+    "Zimbabwe tour operator",
+    "Victoria Falls tours",
+    "about Family Travel and Tours",
+  ],
+});
 
 const MapPinIcon = (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

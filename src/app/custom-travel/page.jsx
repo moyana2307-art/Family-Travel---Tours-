@@ -5,12 +5,21 @@ import EnquiryForm from "@/components/EnquiryForm";
 import Button from "@/components/Button";
 import Reveal from "@/components/Reveal";
 import { IMAGES } from "@/lib/data";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Custom Travel",
+export const metadata = buildMetadata({
+  title: "Custom Travel | Tailor-Made Tours in Zimbabwe",
   description:
-    "Your Trip. Your Way. Tell us where you want to go, what you want to experience, and we'll create a personalized travel experience designed around your needs.",
-};
+    "Your Trip. Your Way. Tell us where you want to go, what you want to experience, and we'll create a personalized, tailor-made travel experience designed around your needs.",
+  path: "/custom-travel",
+  imagePath: IMAGES.adventure,
+  keywords: [
+    "custom tours Zimbabwe",
+    "tailor-made holidays Victoria Falls",
+    "private travel Zimbabwe",
+    "personalized safaris",
+  ],
+});
 
 const QUESTIONS = [
   "Where do you want to go?",

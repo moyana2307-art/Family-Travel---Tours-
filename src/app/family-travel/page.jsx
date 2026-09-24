@@ -4,12 +4,21 @@ import PageHero from "@/components/PageHero";
 import Button from "@/components/Button";
 import Reveal from "@/components/Reveal";
 import { IMAGES } from "@/lib/data";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Family Travel",
+export const metadata = buildMetadata({
+  title: "Family Travel & Holidays | Victoria Falls, Zimbabwe",
   description:
     "Adventures for the whole family. Our family experiences in Zimbabwe are designed to bring parents, children, grandparents, and loved ones closer together.",
-};
+  path: "/family-travel",
+  imagePath: IMAGES.family,
+  keywords: [
+    "family travel Zimbabwe",
+    "family holidays Victoria Falls",
+    "kid friendly safari",
+    "family tours Zimbabwe",
+  ],
+});
 
 const CHECK_ICON = (
   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">

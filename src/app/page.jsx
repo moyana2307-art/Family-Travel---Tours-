@@ -6,11 +6,25 @@ import CtaBanner from "@/components/CtaBanner";
 import Button from "@/components/Button";
 import Reveal from "@/components/Reveal";
 import { IMAGES, TOURS, DESTINATIONS, TESTIMONIALS, COMPANY } from "@/lib/data";
+import { buildMetadata } from "@/lib/seo";
 
 export const metadata = {
-  title: "Family Travel and Tours | Victoria Falls, Zimbabwe",
-  description:
-    "Explore Zimbabwe with the people you love. Discover breathtaking landscapes, unforgettable wildlife, and rich culture with Family Travel and Tours based in Victoria Falls, Zimbabwe.",
+  ...buildMetadata({
+    title: "Victoria Falls Tours, Safaris & Family Holidays",
+    description:
+      "Explore Zimbabwe with the people you love. Discover breathtaking landscapes, unforgettable wildlife, and rich culture with Family Travel and Tours based in Victoria Falls, Zimbabwe.",
+    path: "/",
+    imagePath: IMAGES.heroMain,
+    keywords: [
+      "Victoria Falls tours",
+      "Zimbabwe safaris",
+      "family travel",
+      "Victoria Falls accommodation",
+      "Victoria Falls experiences",
+      "Southern Africa travel",
+    ],
+  }),
+  title: { absolute: "Family Travel and Tours | Victoria Falls, Zimbabwe" },
 };
 
 const WHY = [
@@ -117,7 +131,7 @@ export default function HomePage() {
             <Reveal>
               <div className="cb-image-col">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={IMAGES.family} alt="Family exploring Victoria Falls" />
+                <img src={IMAGES.family} alt="Family exploring Victoria Falls" loading="lazy" />
               </div>
             </Reveal>
             <Reveal delay={0.1}>
@@ -208,6 +222,7 @@ export default function HomePage() {
                   src={IMAGES.heroSafari}
                   alt="Victoria Falls Safari"
                   style={{ height: "100%" }}
+                  loading="lazy"
                 />
               </div>
             </Reveal>
