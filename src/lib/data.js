@@ -12,6 +12,11 @@ export const COMPANY = {
     "Hello Family Travel and Tours,\n\nI'd like to plan a trip. Please get in touch with me.",
   waMessage:
     "Hello Family Travel and Tours, I'd like to plan a trip!",
+  social: {
+    instagram: "https://www.instagram.com/family.travel.tours/",
+    tiktok: "https://www.tiktok.com/@familytravelandtours?lang=en",
+    facebook: "https://www.facebook.com/profile.php?id=61594650964993",
+  },
 };
 
 // Local images served from /public (renamed to clean, space-free filenames).
