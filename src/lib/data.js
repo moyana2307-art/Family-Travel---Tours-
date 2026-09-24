@@ -45,7 +45,7 @@ export const IMAGES = {
   adventure: "/image.jpg",
   sunset: "/sunset-cruise.jpg",
   africaMap: "/g.jpg",
-  logo: "/icon.svg",
+  logo: "/logo.jpeg",
 };
 
 export const NAV_LINKS = [

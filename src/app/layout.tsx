@@ -74,7 +74,13 @@ export const metadata: Metadata = {
     images: [DEFAULT_OG_IMAGE],
   },
   icons: {
-    icon: "/icon.svg",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon-192.png", type: "image/png", sizes: "192x192" },
+      { url: "/icon-512.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
+    shortcut: "/favicon.ico",
   },
 };
 
@@ -84,7 +90,7 @@ const organizationJsonLd = {
   "@id": `${SITE_URL}/#organization`,
   name: COMPANY.name,
   url: SITE_URL,
-  logo: `${SITE_URL}/icon.svg`,
+  logo: `${SITE_URL}/logo.jpeg`,
   image: `${SITE_URL}${DEFAULT_OG_IMAGE}`,
   description:
     "Family Travel and Tours is a Victoria Falls-based travel company offering tours, safaris, experiences, transfers and accommodation across Zimbabwe and Southern Africa.",
