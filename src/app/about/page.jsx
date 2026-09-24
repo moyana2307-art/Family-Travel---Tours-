@@ -130,6 +130,11 @@ export default function AboutPage() {
                   culture, and adventure that Zimbabwe and Southern Africa have to
                   offer.
                 </p>
+                <p>
+                  From safaris and tours to comfortable accommodation, we offer a
+                  complete travel experience, helping you plan everything from the
+                  moment you arrive to your very last day in Zimbabwe.
+                </p>
               </div>
             </Reveal>
           </div>

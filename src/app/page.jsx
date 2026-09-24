@@ -98,7 +98,7 @@ export default function HomePage() {
         <div className="marquee-track">
           {[...Array(2)].map((_, dup) => (
             <span key={dup}>
-              {["Safaris", "Victoria Falls", "Zambezi", "Family Holidays", "Adventure", "Wildlife", "Chobe", "Cultural Experiences", "Transfers"].map(
+              {["Safaris", "Victoria Falls", "Zambezi", "Family Holidays", "Adventure", "Wildlife", "Chobe", "Cultural Experiences", "Accommodation", "Transfers"].map(
                 (w) => (
                   <span key={`${dup}-${w}`}>
                     {w} <span style={{ color: "var(--color-accent)" }}>&bull;</span>
@@ -139,7 +139,9 @@ export default function HomePage() {
                   Whether you&apos;re looking for an exciting safari, a relaxing
                   holiday, an adventure around Victoria Falls, or a tailor-made
                   travel experience, our team is here to make your journey
-                  comfortable, exciting, and unforgettable.
+                  comfortable, exciting, and unforgettable. We also offer
+                  accommodation services to make sure you have a comfortable home
+                  away from home during your stay.
                 </p>
                 <div className="cb-cta">
                   <Button href="/about" variant="outline-dark">

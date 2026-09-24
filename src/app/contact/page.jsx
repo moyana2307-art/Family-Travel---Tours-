@@ -61,7 +61,7 @@ export default function ContactPage() {
                   <div className="contact-icon">{MapPinIcon}</div>
                   <div>
                     <h4>Visit Us</h4>
-                    <p>{COMPANY.city}</p>
+                    <p>{COMPANY.address}</p>
                   </div>
                 </div>
 

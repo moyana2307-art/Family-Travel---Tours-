@@ -16,6 +16,7 @@ const EXPERIENCES = [
   { label: "Adventure", href: "/tours#zambezi-river-adventure" },
   { label: "Family Holidays", href: "/family-travel" },
   { label: "Cultural Experiences", href: "/tours#cultural-experiences" },
+  { label: "Accommodation", href: "/tours#accommodation-and-stays" },
   { label: "Transfers", href: "/tours#airport-and-local-transfers" },
 ];
 
@@ -52,6 +53,15 @@ export default function Footer() {
               rel="noopener noreferrer"
             >
               {COMPANY.email}
+            </a>
+          </div>
+          <div className="footer-contact-row">
+            <a
+              href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(COMPANY.address)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {COMPANY.address}
             </a>
           </div>
         </div>

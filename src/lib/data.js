@@ -3,6 +3,7 @@ export const COMPANY = {
   tagline: "Together We Explore. Together We Create Memories.",
   location: "Based in Victoria Falls, Zimbabwe",
   city: "Victoria Falls, Zimbabwe",
+  address: "9216 Mkhosana, Victoria Falls, Zimbabwe",
   phones: ["+263 779 257 661", "+263 712 540 998", "+44 772 213 7884"],
   whatsapp: ["263779257661", "263712540998", "447722137884"],
   email: "info@familytravel-tours.com",
@@ -132,6 +133,16 @@ export const TOURS = [
     perfectFor: "Culture and community travelers.",
     image: IMAGES.culture,
     tag: "Culture",
+  },
+  {
+    slug: "accommodation-and-stays",
+    name: "Accommodation & Stays",
+    lead: "A Comfortable Home Away From Home",
+    description:
+      "Beyond tours, we also offer accommodation services across Victoria Falls and Zimbabwe. From comfortable guest houses and family-friendly lodges to self-catering stays, we help you find the perfect place to rest, relax, and wake up ready for your next adventure.",
+    perfectFor: "Families, couples, groups, and every traveler looking for a comfortable stay.",
+    image: IMAGES.womanTravel,
+    tag: "Stay",
   },
   {
     slug: "airport-and-local-transfers",
